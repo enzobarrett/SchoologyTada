@@ -2,9 +2,15 @@
     "name": "Schoology Tada",
     "version": "0.6",
     "description": "An extension to play windows 3.1 startup sound on schoology submit!",
-    "manifest_version": 2
+    "manifest_version": 2,
     "background": {
 	"scripts": ["background.js"],
 	"persistent": false
-    }
+    },
+    "content_scripts": [
+	{
+	    "matches": ["*.schoology.com/*"],
+	    "js": ["inject.js"]
+	}
+    ]
 }
