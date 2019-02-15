@@ -9,8 +9,11 @@
     },
     "content_scripts": [
 	{
-	    "matches": ["*.schoology.com/*"],
+	    "matches": ["*://*.schoology.com/*"],
 	    "js": ["inject.js"]
 	}
+    ],
+    "web_accessible_resources": [
+	"sound.mp3"
     ]
 }
